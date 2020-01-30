@@ -13,11 +13,12 @@ import CartContext from './context/CartContext';
 
 function App() {
 	const [products] = useState(data);
-	// console.log(products);
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
 		// add the given item to the cart
+		console.log('add Item: ', item);
+		setCart(cart => [...cart, item])
 	};
 
 	return (
